@@ -1,0 +1,1028 @@
+/* using Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* width includes border & padding */
+    font-family: 'Spartan', sans-serif;
+    /* CSS rules to specify families */
+}
+
+/* global styling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h5 {
+    color: #222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #0c0c0c;
+    margin: 15px 0 20px 0;
+}
+
+.section-padding {
+    /* secttion padding by class */
+    padding: 40px 80px;
+}
+
+.section-margin {
+    /* secttion margin by class */
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+}
+
+footer {
+    /* arrange the columns in one row */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #ebe9e9
+}
+
+footer .column {
+    /* arrange the elements of each column vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo {
+    margin-bottom: 30px;
+}
+
+footer h4 {
+    /* title for each column */
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    /* content for each column */
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+footer .follow-us {
+    margin-top: 20px;
+}
+
+footer .follow-us a {
+    /* resize social media icons */
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+footer .install-app .app-stores img {
+    /* set app store & google play outline */
+    border: 1px solid;
+    border-radius: 6px;
+}
+
+footer .install img {
+    margin: 10px 0 15px 0;
+}
+
+footer a:hover {
+    color: #007aff;
+}
+
+button.blue {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 30px;
+    color: #fff;
+    background-color: #007aff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    /* transition: 0.2s; */
+}
+
+button.white {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 30px;
+    color: #007aff;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #007aff;
+    outline: none;
+    /* transition: 0.2s; */
+}
+
+
+/*-- Header & Navigation Bar--*/
+
+#header {
+    display: flex;
+    /* flexible box layout */
+    align-items: center;
+    justify-content: space-between;
+    /* Arranges each element evenly, the first element is placed at 
+    the beginning, and the last element is placed at the end */
+    /* above codes align Logo, NaviBar, Cart icon in one row */
+    padding: 20px 80px;
+    background: #f4f4f4;
+    box-shadow: 0 5px 15px rgba(3, 3, 3, 0.06);
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 50;
+    /* stacking order, 50 is enough for the header to line up on top */
+}
+
+#navbar {
+    /* align navi bar elements in one row */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* center all elements */
+}
+
+#navbar li {
+    /* remove dots in front of navi bar elements */
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    /* for properly displaying underline effect(#navbar li a:hover::after) */
+}
+
+#navbar li a {
+    /* remove underscore of navi bar elements */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0e0d0d;
+    transition: 0.3s ease;
+    /* smoothly switch colour between hover and general */
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    /* add different colour to hover & active page elements*/
+    color: #007aff;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    /* pseudo class */
+    /* add underline effect to hover & active page elements*/
+    content: "";
+    width: 70%;
+    height: 2px;
+    background: #007aff;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#shopping-bag {
+    color: #0e0d0d;
+    font-size: 20px;
+}
+
+#mobile #ham-wagger-menu {
+    /* hide ham wagger menu on large screen */
+    display: none;
+    align-items: center;
+}
+
+#close {
+    /* hide colsing ham wagger menu icon on large screen */
+    display: none;
+}
+
+/*-- Homepage --*/
+
+#banner {
+    background-image: url(images/banner.jpg);
+    /* image reference: https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2021/08/galaxy_z_fold_3_wf_cases_5-1.jpg?w=1024&quality=82&strip=all&ssl=1 */
+    width: 100%;
+    height: 90vh;
+    /* 90% view height, out of 100% */
+    background-size: cover;
+    background-position: top 25% right 0;
+    /* center the image */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 80px;
+    /* align the banner text to center-left in column */
+}
+
+#banner h4 {
+    /* banner text */
+    padding-bottom: 15px;
+}
+
+#banner h1 {
+    /* banner text */
+    color: #007aff;
+}
+
+#banner #text-h2,
+#text-h4 {
+    /* to prevent the background colour from obscuring the text */
+    text-shadow: 2px 2px 4px #f4f4f4;
+}
+
+#banner button {
+    background-image: url(images/button.png);
+    background-color: transparent;
+    color: #007aff;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    /* let image show properly in center of button*/
+    background-repeat: no-repeat;
+    cursor: pointer;
+    /* cursor shows as a hand when over button */
+    font-weight: 700;
+    font-size: 15px;
+}
+
+#hot-buys {
+    text-align: center;
+}
+
+#hot-buys h2 {
+    /* text of Most Popular */
+    padding-top: 50px;
+}
+
+#hot-buys .product-container {
+    /* arranges all products in rows */
+    display: flex;
+    /* flexible box layout */
+    flex-wrap: wrap;
+    /* automatically wrap */
+    justify-content: space-between;
+    /* Arranges each element evenly, the first element is placed at 
+    the beginning, and the last element is placed at the end */
+    padding-top: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+#hot-buys .product {
+    /* product frame */
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #e1eaf5;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    /* add transition progress from general state to hover state*/
+    position: relative;
+    /* in order to let cart icon displays in proper position */
+}
+
+#hot-buys .product:hover {
+    /* add shadow effect when the cursor over a product */
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    transform: scale(1.08);
+}
+
+#hot-buys .product img {
+    /* fit image to the size of product frame */
+    width: 100%;
+    border-radius: 20px;
+}
+
+#hot-buys .product .product-description {
+    text-align: start;
+    padding: 10px 0;
+}
+
+#hot-buys .product .product-description span {
+    /* product category */
+    color: #777777;
+    font-size: 12px;
+}
+
+#hot-buys .product .product-description h5 {
+    /* product name */
+    padding-top: 7px;
+    font-size: 14px;
+}
+
+#hot-buys .product .product-description i {
+    /* product rating stars */
+    color: rgb(240, 177, 18);
+    font-size: 12px;
+}
+
+#hot-buys .product .product-description h4 {
+    /* product price */
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#hot-buys .product .cart {
+    /* icon of adding to cart */
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    /* center cart icon in cercle */
+    border-radius: 50px;
+    background-color: #e1eaf5;
+    border: 1px solid #dce6f3;
+    font-weight: 500;
+    color: #007aff;
+    position: absolute;
+    /* absolute position relative to it's father (product frame) */
+    bottom: 20px;
+    right: 10px;
+    transition: 0.2s;
+}
+
+#hot-buys .product .cart:hover {
+    color: #fff;
+    background: #007aff;
+    font-weight: 400;
+}
+
+#view-all {
+    /* center View All button */
+    text-align: center;
+}
+
+#newsletter {
+    /* signing up for newsletters */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-image: url(images/newsletter.png);
+    /* image reference: https://image.shutterstock.com/image-vector/email-newsletter-design-laptop-envelopes-600w-265448144.jpg */
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #031c3f;
+    margin-bottom: 0px;
+}
+
+#newsletter h4 {
+    /* the text of Signing Up Newsletters */
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#newsletter p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #8894a7;
+}
+
+#newsletter p span {
+    color: #f8bd32;
+}
+
+#newsletter input {
+    /* the box for inputting email address */
+    height: 3.125rem;
+    font-size: 14px;
+    width: 100%;
+    padding: 0 1.25rem;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 4px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    /* connects email inputting box & sign up button together smoothly */
+}
+
+#newsletter .form {
+    /* arranges email inputting box & sign up button in one row */
+    display: flex;
+    width: 40%;
+}
+
+#newsletter button {
+    /* sign up button for newsletters */
+    white-space: nowrap;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    /* connects email inputting box & sign up button together smoothly */
+}
+
+/* Used Phones Page */
+
+#banner-phones {
+    /* image for used phones */
+    background-image: url(images/phones.jpg);
+    /* image reference: https://ijunkie.com/wp-content/uploads/2022/05/WWDC-2022-Wallpaper.jpg */
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 14px;
+}
+
+#banner-phones h2 {
+    color: #fff;
+}
+
+#pagination {
+    text-align: center;
+}
+
+#pagination a {
+    text-decoration: none;
+    background: #007aff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 500;
+}
+
+#pagination a i {
+    /* resize pagination arrow button */
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.breadcrumbs {
+    /* readcrumbs pathways */
+    padding-top: 8px;
+    padding-left: 18%;
+    display: flex;
+    flex-direction: row;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+}
+
+.breadcrumbs a p:hover {
+    color: #007aff;
+}
+
+.filter {
+    /* filter for filting phones & accessories */
+    padding-left: 18%;
+}
+
+/* Accessories Page */
+#banner-acc {
+    /* image for accessories */
+    background-image: url(images/accessories.jpg);
+    /* image reference: https://i.pinimg.com/originals/a9/5c/e0/a95ce00d04ecfc1cda528f0efafbaa11.jpg */
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 14px;
+}
+
+#banner-acc h2 {
+    color: #fff;
+}
+
+/* Contact Us Page */
+
+#banner-contact {
+    /* image for accessories */
+    background-image: url(images/city.png);
+    /* image reference: https://i.pinimg.com/originals/a9/5c/e0/a95ce00d04ecfc1cda528f0efafbaa11.jpg */
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 14px;
+}
+
+#banner-contact h2 {
+    color: #fff;
+}
+
+#contact-details {
+    /* arrange contact info & map in onw row*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 80%; */
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+#contact-details .details {
+    /* contact infomation details */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#contact-details .details span,
+#form-details span {
+    font-size: 12px;
+}
+
+#contact-details .details h2,
+#form-details h2,
+#story h2 {
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+
+#contact-details .details h3 {
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+
+#contact-details .details li {
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+#contact-details .details li i {
+    font-size: 14px;
+    padding-right: 22px;
+}
+
+#contact-details .details li p,
+#story p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#contact-details .map {
+    width: 55%;
+    height: 400px;
+}
+
+#contact-details .map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#story {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+    /* margin-right: 10%; */
+}
+
+#form-details {
+    /* leaving message frame */
+    display: flex;
+    justify-content: space-between;
+    /* margin: 30px;
+    padding: 80px; */
+    border: 1px solid #fff;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#form-details form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#form-details form input,
+#form-details form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+
+/* Single Product Details */
+
+#prodetails {
+    /* arrange images & detais text in one row */
+    display: flex;
+    margin-top: 20px;
+}
+
+#prodetails .single-pro-image {
+    /* resize product images */
+    width: 40%;
+    margin-right: 50px;
+}
+
+.small-img-group {
+    /* arrange candidate images in one row */
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col {
+    /* add spaces between candidate */
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#prodetails .single-pro-details {
+    /* product details take up half the page */
+    width: 50%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#prodetails .single-pro-details h4 {
+    padding: 40px 0 20px 0;
+}
+
+#prodetails .single-pro-details h2 {
+    font-size: 26px;
+}
+
+#prodetails .single-pro-details select {
+    /* box for showing the condition of product */
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    width: 20%;
+}
+
+#prodetails .single-pro-details input {
+    /* box for selecting quantity of product */
+    width: 20%;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#prodetails .single-pro-details input:focus {
+    outline: none;
+}
+
+#prodetails .single-pro-details button {
+    /* add to cart & buy it now buttons */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#prodetails .single-pro-details article {
+    /* key features of product */
+    line-height: 25px;
+}
+
+.goback {
+    /* go back button to phones or accessories*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border: 1px solid #fff;
+}
+
+/* Shopping cart */
+
+.shopping-cart {
+    /* side shopping cart */
+    position: fixed;
+    top: 0;
+    right: -150%;
+    width: 460px;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
+    transition: 0.3s;
+}
+
+.shopping-cart.active{
+    /* shows cart when clicked */
+    right: 0;
+}
+
+#shopping-bag:hover {
+    cursor: pointer;
+}
+
+.cart-title {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* .cart-img {
+    width: 60%;
+} */
+
+.cart-box {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cart-img {
+    /* image of prodct in cart */
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail-box {
+    display: grid;
+    /* row-gap: 0.1rem; */
+}
+
+.cart-product-title {
+    font-size: 1rem;
+    /* text-transform: uppercase; */
+}
+
+.cart-price {
+    font-weight: 500;
+}
+
+.cart-quantity {
+    /* product quantity input */
+    border: 1px solid #0e0d0d;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.cart-remove {
+    /* icon of removing product from cart */
+    font-size: 24px;
+    color: #0e0d0d;
+    cursor: pointer;
+}
+
+.cart-remove:hover {
+    color: #f52a2a;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid #777777;
+}
+
+.total-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.total-price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 0.5rem;
+}
+
+.btn-buy {
+    /* check out button */
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+}
+
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Media Query */
+
+/* Fits for pad screen size (width < 800px) */
+
+@media (max-width:800px) {
+    .section-padding {
+        /* uses less secttion padding on pad screen */
+        padding: 40px 40px;
+    }
+
+    /* Homepage */
+    #navbar {
+        /* Display the side navigation bar when the screen is small. */
+        display: flex;
+        flex-direction: column;
+        /* arrange navigation bar vertically */
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0px;
+        right: -300px;
+        /* hide side navigation bar when ham wagger menu not clicked */
+        height: 100vh;
+        width: 300px;
+        background: #f4f4f4;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.4s;
+    }
+
+    #navbar li {
+        /* resize margin between navigation bar elements */
+        margin-bottom: 25px;
+    }
+
+    #navbar.active {
+        /* if ham wagger menu actived, show side navigation bar */
+        right: 0px;
+    }
+
+    #mobile #ham-wagger-menu {
+        /* dispaly ham wagger menu on small screen */
+        display: flex;
+        /* align-items: center; */
+    }
+
+    #mobile {
+        /* arrange cart icon & ham wagger menu in one row */
+        display: flex;
+    }
+
+    #mobile i {
+        /* resize the icon of ham wagger menu */
+        color: #0e0d0d;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close {
+        /* close tag for closing ham wagger menu */
+        display: initial;
+        font-size: 24px;
+        top: 30px;
+        left: 30px;
+        color: #0e0d0d;
+        position: absolute;
+    }
+
+    #banner {
+        /* relocates the background image of banner on small screen */
+        padding: 0 80px;
+        height: 70vh;
+        background-position: top 30% right 30%;
+    }
+
+    #hot-buys .product-container {
+        /* resize product frame */
+        justify-content: center;
+    }
+
+    #hot-buys .product {
+        margin: 15px;
+    }
+
+    #newsletter .form {
+        width: 70%;
+    }
+}
+
+/* Fits for smartphone screen size (width < 500px) */
+
+@media (max-width:500px) {
+    .section-padding {
+        /* uses less secttion padding on smartphone screen */
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    /* Homepage */
+    #header {
+        padding: 10px 30px;
+    }
+
+    #banner {
+        padding: 0 20px;
+        height: 70vh;
+        background-position: 55%;
+    }
+
+    #hot-buys .product {
+        width: 100%;
+    }
+
+    #newsletter {
+        padding: 40px 20px;
+    }
+
+    #newsletter .form {
+        width: 100%;
+    }
+
+
+    /* Single product */
+    /* display all information in one column since there is no enough
+    space for arranging two rows */
+    #prodetails {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #prodetails .single-pro-image {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    #prodetails .single-pro-details {
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    /* Contact Us Page */
+    #contact-details .details {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    #contact-details .map {
+        width: 100%;
+    }
+
+    #contact-details {
+        flex-wrap: wrap;
+    }
+
+    #form-details {
+        margin: 10px;
+        padding: 30px 10px;
+        flex-wrap: wrap;
+    }
+
+    #form-details form {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .shopping-cart {
+        width: 380px;
+    }
+}

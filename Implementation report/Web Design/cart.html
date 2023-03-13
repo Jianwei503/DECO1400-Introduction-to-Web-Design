@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Render in top standard mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load all styles from Font Awesome CDN, set icons using Font Awesome Kit -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <title>T-MATE Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Sticky Navigation Bar -->
+    <header id="header">
+        <!-- Clicking on Logo links to current page -->
+        <a href="index.html"><img src="images/logo.png" class="logo" alt="T-MATE"></a>
+        <!-- image reference: https://scontent.fcbr1-1.fna.fbcdn.net/v/t39.30808-6/241249793_1779407308912520_3584899995908869570_n.png?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=5pvpaeeaeCUAX8Zd99Y&_nc_ht=scontent.fcbr1-1.fna&oh=00_AT_FttHWpmzMNLAYd0JtuL18XezcYA9CXh1Bqej1FMiKGQ&oe=6295152A-->
+
+        <!-- Navigation -->
+        <nav>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="usedphones.html">Used Phones</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </nav>
+
+        <!-- Ham Wagger Menu on small creen -->
+        <nav id="mobile">
+            <!-- Shopping cart icon from Font Awesome -->
+            <a id="shopping-bag" href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="ham-wagger-menu" class="fas fa-outdent"></i>
+        </nav>
+    </header>
+
+     <!-- Banner -->
+     <section id="banner-cart">
+        <h2>Your Cart</h2>
+    </section>
+
+    <!-- Breadcrumbs Pathways -->
+    <nav class="breadcrumbs">
+        <a title="Back to Homepage" href="index.html"><p>Home</p></a>
+        <p>&nbsp;>&nbsp;Your Cart</p>
+    </nav>
+
+    <!--  Shopping Cart -->
+    <section id="cart" class="section-padding">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="images/phones/iphone/iphone 13 256G - Green.png" alt=""></td>
+                    <td>iPhone 13 256G - Green</td>
+                    <td>$899.00</td>
+                    <td><input type="number" value="1" name="" id=""></td>
+                    <td>$899.00</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="images/accessories/charger/Apple 20W USB-C Charger.jpg" alt=""></td>
+                    <!-- image reference: https://s.catch.com.au/static/catch/images/product-image--stub-92448111bf.gif -->
+                    <td>Apple 20W USB-C Charger</td>
+                    <td>$25.00</td>
+                    <td><input type="number" value="1" name="" id=""></td>
+                    <td>$25.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-add" class="section-padding">
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>$ 924.00</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>$ 924.00</strong></td>
+                </tr>
+            </table>
+            <button class="blue">CHECK OUT</button>
+            <button class="white">CONTINUE SHOPPING</button>
+        </div>
+    </section>
+
+    <!-- Signing up for newsletters -->
+    <section id="newsletter" class="section-margin section-padding">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="blue">Sign Up</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer section-padding">
+        <!-- Contact Us column -->
+        <div class="column">
+            <img class="logo" src="images/logo.png" alt="logo">
+            <h4>Contact Us</h4>
+            <p><strong>Phone:</strong> +61 7 3135 5450</p>
+            <p><strong>Address: </strong> Kessels Rd, Upper Mount Gravatt QLD 4122</p>
+            <p><strong>Hours:</strong> 9:00 - 17:30, Mon - Sun</p>
+            <div class="follow-us">
+                <h4>Follow Us</h4>
+                <div class="social-media">
+                    <a class="fab fa-facebook" href="https://www.facebook.com/tmatepro/?ref=page_internal"></a>
+                    <a class="fab fa-instagram" href="https://www.instagram.com/tmate.mobileaccessories/"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- About T-MATE column -->
+        <div class="column">
+            <h4>About T-MATE</h4>
+            <a href="contact.html#story">Our Story</a>
+        </div>
+
+        <!-- Policies column -->
+        <div class="column">
+            <h4>Policies</h4>
+            <a href="policies.html">Warranty & Refund Policy</a>
+            <a href="policies.html">Shipping Policy</a>
+            <a href="policies.html">Privacy Policy</a>
+        </div>
+
+        <!-- Apps Links column -->
+        <div class="column install-app">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="app-stores">
+                <a href="https://www.apple.com/app-store/">
+                <img src="images/app/appstore.jpg" alt="appstore">
+                <!-- image reference: https://www.shutterstock.com/image-photo/kiev-ukraine-october-20-2020-download-1838003368 -->
+                </a>
+                <a href="https://play.google.com/store/apps">
+                <img src="images/app/googleplay.jpg" alt="googleplay">
+                <!-- image reference: https://www.shutterstock.com/image-photo/kiev-ukraine-october-20-2020-download-1838003368 -->
+                </a>
+            </div>
+            <p>Secured Payment Gateways </p>
+            <img src="images/pay.png" alt="payments">
+            <!-- image reference: http://anuratyres.com/wp-content/uploads/2021/06/cards.png -->
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
